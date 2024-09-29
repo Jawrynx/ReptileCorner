@@ -42,6 +42,8 @@ Admin Panel:
 
 ### Wireframes
 
+![Desktop View](https://github.com/user-attachments/assets/f3ef2f27-ca07-4846-853c-bae450549f9d)
+![Mobile View](https://github.com/user-attachments/assets/4005aafc-126c-4d6b-a814-7b2293882a02)
 
 
 ### Technical Considerations
