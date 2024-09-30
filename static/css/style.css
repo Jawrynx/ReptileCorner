@@ -149,3 +149,14 @@ body:has(.side-menu:checked) {
 .desc {
     margin-top: 20px;
 }
+
+.posts-container {
+    background-color: yellow;
+    height: 100%;
+}
+
+.posts-list {
+    width: 100%;
+    padding: 50px;
+    background-color: white;
+}
