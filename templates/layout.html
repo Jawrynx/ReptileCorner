@@ -9,14 +9,28 @@
             Reptile Corner
         {% endblock %}
     </title>
+    <script src="https://kit.fontawesome.com/c15e7f6444.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <script src="{% static 'js/main.js' %}" defer></script>
 </head>
 <body>
-    <nav>
-
-    </nav>
-    <main>
+    <header class="header">
+        <!-- Logo -->
+        <a href="#" class="logo">RC</a>
+        <!-- Hamburger icon -->
+        <input class="side-menu" type="checkbox" id="side-menu"/>
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <!-- Menu -->
+        <nav class="nav">
+            <ul class="menu">
+                <li><a href="#">Posts</a></li>
+                <li><a href="#">Reptiles</a> </li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
         {% block content %}
         {% endblock %}
     </main>
