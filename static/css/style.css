@@ -34,26 +34,36 @@ ul{
     display: inline-block;
     color: black;
     font-size: 60px;
+    font-weight: bolder;
     margin-left: 10px;
 }
 
 /* Nav menu */
 .nav{
-    width: 100%;
+    width: 150px;
     height: 100%;
     position: fixed;
     background-color: yellow;
     overflow: hidden;
-
+    right: 0;
+    border-bottom-left-radius: 25px;
+    margin-top: 13px;
+    /* Nav Box-Shadow for consistent styling */
+    box-shadow: 
+    /* Horizontal Offset | Vertical Offset | Blur Radius | Spread Radius | Color */
+    0px 5px 5px -5px rgba(0, 0, 0, 0.5), /* Bottom shadow */
+    -5px 0px 5px -5px rgba(0, 0, 0, 0.5); /* Left shadow */
 }
 .menu a{
     display: block;
     padding: 30px;
     color: black;
+    transition: 0.3s ease-in-out;
 }
 .menu a:hover{
     background-color: darkgreen;
     color: white;
+    transition: 0.3s ease-in-out;
 }
 .nav{
     max-height: 0;
@@ -120,6 +130,22 @@ body:has(.side-menu:checked) {
 /* Main Content Area */
 
 .main {
-    margin-top: 50px;
     text-align: center;
+}
+
+.hero-container {
+    width: 100%;
+    padding: 50px;
+    background-color: white;
+}
+
+.hero-title {
+    background-color: darkgreen;
+    padding: 10px;
+    border-radius: 15px;
+    color: white;
+}
+
+.desc {
+    margin-top: 20px;
 }
