@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    {{ post.title }}
+{% endblock %}
+
+{% block content %}
+        <h1>{{ post.title }}</h1>
+        <p class="body-field">{{ post.body }}</p>
+        <p class="date-stamp">{{ post.date }}</p>
+    </section>
+{% endblock %}
