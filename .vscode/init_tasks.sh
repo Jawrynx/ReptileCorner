@@ -17,7 +17,7 @@ echo "Setting up the virtual environment..."
 python3 -m venv .venv
 source .venv/bin/activate
 
-pip install --upgrade pip
+python3 -m pip install -U --no-user pip
 
 # Install requirements, explicitly targeting the virtual environment
 pip install --no-user -r requirements.txt 
