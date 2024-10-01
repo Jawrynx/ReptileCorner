@@ -12,9 +12,14 @@ echo "Creating .sqliterc file"
 echo ".headers on" > ~/.sqliterc
 echo ".mode column" >> ~/.sqliterc
 
+# Set up the virtual environment
 echo "Setting up the virtual environment..."
 python3 -m venv .venv
 source .venv/bin/activate
-pip install --ignore-installed -r requirements.txt
+
+pip install --upgrade pip
+
+# Install requirements, explicitly targeting the virtual environment
+pip install --no-user -r requirements.txt 
 
 echo "Your workspace is ready to use. Happy coding!"
