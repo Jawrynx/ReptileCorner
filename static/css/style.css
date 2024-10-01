@@ -150,6 +150,8 @@ body:has(.side-menu:checked) {
     margin-top: 20px;
 }
 
+/* Posts Lists Styling */
+
 .posts-container {
     background-color: yellow;
     height: 100%;
@@ -180,4 +182,18 @@ body:has(.side-menu:checked) {
 
 .date-stamp {
     margin: 25px 0;
+}
+
+/* Individual Posts */
+
+.post-page {
+    margin: 50px;
+    padding: 25px;
+    background-color: darkgreen;
+    border-radius: 25px;
+    color: white;
+}
+
+.post-page h1 {
+    margin-bottom: 20px;
 }
