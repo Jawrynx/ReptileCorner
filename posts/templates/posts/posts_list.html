@@ -11,12 +11,10 @@
         {% for post in posts %}
             <article class="post">
                 <h2>
-                    <a href="{% url 'posts:page' slug=post.slug %}">
-                        {{ post.title }}
-                    </a>
+                    {{ post.title }}
                 </h2>
-                <p>{{ post.date }} by {{ post.author }}</p>
                 <p>{{ post.body }}</p>
+                <p>{{ post.date }}</p>
             </article>
         {% endfor %}
     </section>
