@@ -5,9 +5,8 @@
 {% endblock %}
 
 {% block content %}
+    <h1 class="posts-list-title">- POSTS -</h1>
     <section class="posts-list">
-        <h1>Posts</h1>
-
         {% for post in posts %}
             <article class="post">
                 <h2>
@@ -15,8 +14,10 @@
                         {{ post.title }}
                     </a>
                 </h2>
+                <img class="image" src="{{ post.image.url }}" alt="{{ post.title }}">
                 <p class="body-field">{{ post.body }}</p>
                 <p class="date-stamp">{{ post.date }}</p>
+                <a href="{% url 'posts:page' slug=post.slug %}" class="read-more">READ MORE</a>
             </article>
         {% endfor %}
     </section>
