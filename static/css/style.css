@@ -163,7 +163,7 @@ body:has(.side-menu:checked) {
 }
 
 .posts-container {
-    background-color: yellow;
+    background-color: #ffe139;
     height: 100%;
     padding-top: 50px;
 }
@@ -174,13 +174,11 @@ body:has(.side-menu:checked) {
     align-items: center;
     width: 100%;
     padding: 50px;
-    background-color: yellow;
+    background-color: #ffe139;
 }
 
 .post {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    background-color: yellow;
     align-content: center;
     max-width: 800px;
     border: 2px solid black;
