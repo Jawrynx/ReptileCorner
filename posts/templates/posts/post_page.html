@@ -6,13 +6,24 @@
 
 {% block content %}
     <section class="post-page">
-        <div class="post-header">
-            <i class="fa-solid fa-arrow-left" onclick="history.back()">     B A C K</i>
-            <h1>{{ post.title }}</h1>
-            <p></p>
+        <div class="grid">
+            <div class="col-1">
+                <div class="post-header">
+                    <i class="fa-solid fa-arrow-left" onclick="history.back()"> B A C K</i>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="post-header">
+                    <h1>{{ post.title }}</h1>
+                </div>
+            </div>
         </div>
         <img class="post-image" src="{{ post.image.url }}" alt="{{ post.title }}">
-        <p class="body-field">{{ post.body }}</p>
-        <p class="date-stamp">{{ post.date }}</p>
+        <div class="col-12">
+            <p class="body-field">{{ post.body }}</p>
+        </div>
+        <div class="col-12">
+            <p class="date-stamp">{{ post.date }}</p>
+        </div>
     </section>
 {% endblock %}

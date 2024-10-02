@@ -235,7 +235,7 @@ body:has(.side-menu:checked) {
 
 /* Individual Posts */
 .post-page {
-    margin: 50px;
+    margin: 50px 50px;
     padding: 25px;
     background-color: darkgreen;
     border: 3px solid black;
@@ -243,13 +243,14 @@ body:has(.side-menu:checked) {
     color: white;
 }
 
-.post-header {
+/* .post-header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
+} */
 
 .post-header i {
+    left: 0;
     background-color: yellow;
     border-radius: 10px;
     border: 1px solid black;
@@ -274,6 +275,7 @@ body:has(.side-menu:checked) {
 }
 
 @media screen and (min-width: 992px) {
+    /* Posts List */
     .posts-list {
         flex-direction: row;
         align-items: flex-start;
@@ -293,5 +295,10 @@ body:has(.side-menu:checked) {
 
     .read-more:hover {
         background-color: #005600; /* Slightly darker green on hover */
+    }
+
+    /* Individual Posts */
+    .post-page {
+        margin: 50px 200px;
     }
 }
