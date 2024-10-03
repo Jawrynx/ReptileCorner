@@ -71,6 +71,19 @@ ul{
     transition: max-height .5s ease-out;
 }
 
+.horizontal-line {
+    display: block;
+    left: 10px;
+    width: 80%;
+    border-top: 2px solid black;
+}
+  
+.line-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
 /* Menu Icon */
 .hamb{
     cursor: pointer;
@@ -149,6 +162,30 @@ body:has(.side-menu:checked) {
 
 .desc {
     margin-top: 20px;
+}
+
+/* Home Page User Registration / Login Styling */
+
+.users-container {
+    background-color: darkgreen;
+    padding: 50px;
+    display: flex;
+    justify-content: space-evenly;
+
+}.users-container a {
+    text-decoration: none;
+    color: black;
+    background-color: yellow;
+    padding: 25px 35px;
+    border: 2px solid black;
+    box-shadow: 2px 2px 2px black;
+}
+
+.users-container a:hover {
+    transform: scale(1.01);
+    color: black; 
+    background-color: #FFD700; 
+    box-shadow: 4px 4px 4px black;
 }
 
 /* Posts Lists Styling */
@@ -273,6 +310,13 @@ body:has(.side-menu:checked) {
 }
 
 @media screen and (min-width: 992px) {
+    /* Home page User Area */
+
+    .users-container a {
+    padding: 35px 55px;
+    font-size: 1.5rem;
+    }
+
     /* Posts List */
     .posts-list {
         flex-direction: row;
