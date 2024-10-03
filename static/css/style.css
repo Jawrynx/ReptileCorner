@@ -135,6 +135,12 @@ ul{
     top:0;
 }
 
+/* Nav menu Desktop */
+
+.desktop-nav, .desktop-user-links {
+    display: none;
+}
+
 /* body:has(.side-menu:checked) {
   overflow: hidden;
 } */
