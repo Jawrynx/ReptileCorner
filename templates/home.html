@@ -13,8 +13,12 @@
         <p class="desc"><em>A place for reptile enthuasiasts to connect, share and learn about reptiles!</em></p>
     </div>
     <div class="users-container">
+        {% if user.is_authenticated %}
+            <h1 id="registered-user-message">Hello,<br><span>{{ user.username }}</span>!</h1>
+        {% else %}
         <a href="{% url 'users:register' %}">SIGN UP</a>
-        <a href="#">LOGIN</a>
+        <a href="{% url 'users:login' %}">LOGIN</a>
+        {% endif %}
     </div>
     <div class="posts-container">
         <h2>- LATEST -</h2>

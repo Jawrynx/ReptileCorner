@@ -192,6 +192,16 @@ ul{
     box-shadow: 4px 4px 4px black;
 }
 
+#registered-user-message {
+    color: white;
+    font-size: 3rem;
+}
+
+#registered-user-message span {
+    color: yellow;
+    text-shadow: 1px 1px 1px white;
+}
+
 /* Posts Lists Styling */
 
 .posts-list-title {
@@ -375,6 +385,8 @@ ul{
     padding: 35px 55px;
     font-size: 1.5rem;
     }
+
+
 
     /* Posts List */
     .posts-list {
