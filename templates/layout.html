@@ -21,7 +21,7 @@
         <!-- Hamburger icon -->
         <input class="side-menu" type="checkbox" id="side-menu"/>
         <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
-        <!-- Menu -->
+        <!-- Mobile Menu -->
         <nav class="nav">
             <ul class="menu">
                 <li><a href="/">Home</a></li>
@@ -35,6 +35,20 @@
                 <li><a href="{% url 'users:register' %}">Register</a></li>
             </ul>
         </nav>
+        <!-- Larger Display Menu -->
+         <div class="desktop-nav">
+            <ul class="menu-desktop">
+                <li><a href="/">Home</a></li>
+                <li><a href="{% url 'posts:list' %}">Posts</a></li>
+                <li><a href="#">Reptiles</a> </li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+         </div>
+         <div class="desktop-user-links">
+            <a href="#">Login</a>
+            <a href="{% url 'users:register' %}" id="register-button">REGISTER</a>
+         </div>
     </header>
     <main class="main">
         {% block content %}
