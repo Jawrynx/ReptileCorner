@@ -8,7 +8,7 @@ def register_view(request):
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
         if form.is_valid():
-            form.save()
+            login(request, form.save())
             return redirect('posts:list')
     else:
         form = UserCreationForm()
