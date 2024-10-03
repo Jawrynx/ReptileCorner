@@ -307,6 +307,16 @@ ul{
     margin-bottom: 25px;
 }
 
+/* Registration Form */
+
+.helptext {
+    color: blue;
+}
+
+.errorlist {
+    color: red;
+}
+
 @media screen and (min-width: 992px) {
     /* Navbar */
 
