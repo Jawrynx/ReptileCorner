@@ -15,10 +15,13 @@ def post_page(request, slug):
 
 @login_required(login_url="/users/login/")
 def post_new(request):
-    if request.method == 'POST':
+    if request.method == "POST":
         form = forms.CreatePost(request.POST, request.FILES)
         if form.is_valid():
+            newpost = form.save(commit=False)
+            newpost.author = request.user
+            newpost.save()
             return redirect('posts:list')
-    else:    
+    else:
         form = forms.CreatePost()
-    return render(request, 'posts/post_new.html', { "form": form })
+    return render(request, 'posts/post_new.html', { 'form': form })
