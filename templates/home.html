@@ -23,7 +23,7 @@
     <div class="posts-container">
         <h2>- LATEST -</h2>
         <section class="posts-list">
-            {% for post in posts %}
+            {% for post in posts|slice:":5" %}
                 <article class="post">
                     <h2>
                         <a href="{% url 'posts:page' slug=post.slug %}">
