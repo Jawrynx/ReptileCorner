@@ -53,6 +53,10 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'ReptileCorner.urls'
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://*.codeinstitute-ide.net',
+]
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
