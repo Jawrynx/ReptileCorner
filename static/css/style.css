@@ -358,10 +358,11 @@ ul{
         margin-right: 25px;
     }
 
-    #register-button {
+    .dark-button {
         color: white;
         background-color: black;
         padding: 5px 20px;
+        border-radius: 4px;
     }
 
     /* Home page User Area */
