@@ -33,6 +33,7 @@
                     <span class="horizontal-line"></span>
                 </div>
                 <li><a href="{% url 'users:register' %}">Register</a></li>
+                <li><a href="{% url 'users:login' %}">Login</a></li>
             </ul>
         </nav>
         <!-- Larger Display Menu -->
@@ -46,7 +47,7 @@
             </ul>
          </div>
          <div class="desktop-user-links">
-            <a href="#">Login</a>
+            <a href="{% url 'users:login' %}">Login</a>
             <a href="{% url 'users:register' %}" id="register-button">REGISTER</a>
          </div>
     </header>
