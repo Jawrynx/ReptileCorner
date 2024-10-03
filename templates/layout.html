@@ -32,13 +32,16 @@
                 <div class="line-container">
                     <span class="horizontal-line"></span>
                 </div>
-                <li><a href="{% url 'users:register' %}">Register</a></li>
-                <li><a href="{% url 'users:login' %}">Login</a></li>
-                <li><a href="{% url 'posts:new-post' %}">Create Post</a></li>
-                <form class="logout" action="{% url 'users:logout' %}" method="post">
-                    {% csrf_token %}
-                    <button class="logout-button">Logout</button>
-                </form>
+                {% if user.is_authenticated %}
+                    <li><a href="{% url 'posts:new-post' %}">Create Post</a></li>
+                    <form class="logout" action="{% url 'users:logout' %}" method="post">
+                        {% csrf_token %}
+                        <button class="logout-button">Logout</button>
+                    </form>
+                {% else %}
+                    <li><a href="{% url 'users:register' %}">Register</a></li>
+                    <li><a href="{% url 'users:login' %}">Login</a></li>
+                {% endif %}
             </ul>
         </nav>
         <!-- Larger Display Menu -->
@@ -52,13 +55,16 @@
             </ul>
          </div>
          <div class="desktop-user-links">
-            <a href="{% url 'users:login' %}">Login</a>
-            <a href="{% url 'users:register' %}" id="register-button">REGISTER</a>
-            <a href="{% url 'posts:new-post' %}">Create Post</a>
-            <form class="logout" action="{% url 'users:logout' %}" method="post">
-                {% csrf_token %}
-                <button class="logout-button">Logout</button>
-            </form>
+            {% if user.is_authenticated %}
+                <a href="{% url 'posts:new-post' %}">Create Post</a>
+                <form class="logout" action="{% url 'users:logout' %}" method="post">
+                    {% csrf_token %}
+                    <button class="logout-button">Logout</button>
+                </form>
+            {% else %}
+                <a href="{% url 'users:login' %}">Login</a>
+                <a href="{% url 'users:register' %}" id="register-button">REGISTER</a>
+            {% endif %}
          </div>
     </header>
     <main class="main">
