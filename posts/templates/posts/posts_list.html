@@ -16,7 +16,7 @@
                 </h2>
                 <img class="image" src="{{ post.image.url }}" alt="{{ post.title }}">
                 <p class="body-field">{{ post.body }}</p>
-                <p class="date-stamp">{{ post.date }}</p>
+                <p class="date-stamp">{{ post.date }} by {{ post.author }}</p>
                 <a href="{% url 'posts:page' slug=post.slug %}" class="read-more">READ MORE</a>
             </article>
         {% endfor %}
