@@ -32,7 +32,13 @@
                 <div class="line-container">
                     <span class="horizontal-line"></span>
                 </div>
-                <li><a href="{% url 'users:register' %}">Register</a></li>
+                {% if user.is_authenticated %}
+                    <li><a href="{% url 'posts:new-post' %}">Create Post</a></li>
+                    <li><a href="{% url 'users:logout' %}" class="logout-button">Logout</a></li>
+                {% else %}
+                    <li><a href="{% url 'users:register' %}">Register</a></li>
+                    <li><a href="{% url 'users:login' %}">Login</a></li>
+                {% endif %}
             </ul>
         </nav>
         <!-- Larger Display Menu -->
@@ -46,8 +52,13 @@
             </ul>
          </div>
          <div class="desktop-user-links">
-            <a href="#">Login</a>
-            <a href="{% url 'users:register' %}" id="register-button">REGISTER</a>
+            {% if user.is_authenticated %}
+                <a href="{% url 'users:logout' %}" class="logout-button">Logout</a> 
+                <a href="{% url 'posts:new-post' %}" class="dark-button">Create Post</a>
+            {% else %}
+                <a href="{% url 'users:login' %}">Login</a>
+                <a href="{% url 'users:register' %}" class="dark-button">REGISTER</a>
+            {% endif %}
          </div>
     </header>
     <main class="main">
