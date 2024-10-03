@@ -54,6 +54,8 @@ ul{
     /* Horizontal Offset | Vertical Offset | Blur Radius | Spread Radius | Color */
     0px 5px 5px -5px rgba(0, 0, 0, 0.5), /* Bottom shadow */
     -5px 0px 5px -5px rgba(0, 0, 0, 0.5); /* Left shadow */
+    max-height: 0px;
+    transition: max-height .5s ease-out;
 }
 .menu a{
     display: block;
@@ -66,10 +68,19 @@ ul{
     color: white;
     transition: 0.3s ease-in-out;
 }
-.nav{
-    max-height: 0px;
-    transition: max-height .5s ease-out;
+
+.horizontal-line {
+    display: block;
+    left: 10px;
+    width: 80%;
+    border-top: 2px solid black;
 }
+  
+.line-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
 /* Menu Icon */
 .hamb{
@@ -124,9 +135,9 @@ ul{
     top:0;
 }
 
-body:has(.side-menu:checked) {
+/* body:has(.side-menu:checked) {
   overflow: hidden;
-}
+} */
 
 /* Main Content Area */
 
@@ -149,6 +160,30 @@ body:has(.side-menu:checked) {
 
 .desc {
     margin-top: 20px;
+}
+
+/* Home Page User Registration / Login Styling */
+
+.users-container {
+    background-color: darkgreen;
+    padding: 50px;
+    display: flex;
+    justify-content: space-evenly;
+
+}.users-container a {
+    text-decoration: none;
+    color: black;
+    background-color: yellow;
+    padding: 25px 35px;
+    border: 2px solid black;
+    box-shadow: 2px 2px 2px black;
+}
+
+.users-container a:hover {
+    transform: scale(1.01);
+    color: black; 
+    background-color: #FFD700; 
+    box-shadow: 4px 4px 4px black;
 }
 
 /* Posts Lists Styling */
@@ -273,6 +308,54 @@ body:has(.side-menu:checked) {
 }
 
 @media screen and (min-width: 992px) {
+    /* Navbar */
+
+    .side-menu,
+    .hamb,
+    .nav {
+        display: none;
+    }
+    
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .desktop-nav {
+        width: 30%;
+    }
+
+    .menu-desktop {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .desktop-user-links {
+        margin-right: 50px;
+    }
+
+    .desktop-user-links a {
+        margin-right: 25px;
+    }
+
+    #register-button {
+        color: white;
+        background-color: black;
+        padding: 5px 20px;
+    }
+
+    /* Home page User Area */
+
+    .users-container {
+        display: none;
+    }
+
+    .users-container a {
+    padding: 35px 55px;
+    font-size: 1.5rem;
+    }
+
     /* Posts List */
     .posts-list {
         flex-direction: row;
