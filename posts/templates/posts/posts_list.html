@@ -15,7 +15,7 @@
                     {{ post.title }}
                 </a>
             </h2>
-            <img class="image col-12" src="{{ post.image.url }}" alt="{{ post.title }}">
+            <a href="{% url 'posts:page' slug=post.slug %}"><img class="image col-12" src="{{ post.image.url }}" alt="{{ post.title }}"></a>
             <p class="body-field col-12">{{ post.body }}</p>
             <p class="date-stamp col-12"><em>{{ post.date }}</em> by <strong>{{ post.author }}</strong></p>
             <a href="{% url 'posts:page' slug=post.slug %}" class="read-more col-12">READ MORE</a>
