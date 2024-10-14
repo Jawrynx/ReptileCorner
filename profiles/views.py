@@ -1,23 +1,32 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from .forms import ProfileUpdateForm
 from django.contrib import messages
-
-# Create your views here.
+from django.contrib.auth.models import User
 
 @login_required
-def profile(request):
+def profile(request, username): 
+    user = get_object_or_404(User, username=username) 
+    context = {
+        'user': user 
+    }
+    return render(request, 'profiles/profile.html', context)
+
+
+@login_required
+def edit_profile(request):
     if request.method == 'POST':
         p_form = ProfileUpdateForm(request.POST, 
                                    request.FILES, 
                                    instance=request.user.profile)
-        if p_form.save():
+        if p_form.is_valid():
+            p_form.save()
             messages.success(request, f'Your profile has been updated!')
-            return redirect('profile') 
+            return redirect('profiles:profile', username=request.user.username) 
     else:
         p_form = ProfileUpdateForm(instance=request.user.profile)
 
     context = {
         'p_form': p_form
     }
-    return render(request, 'profiles/profile.html', context)
+    return render(request, 'profiles/edit_profile.html', context)
