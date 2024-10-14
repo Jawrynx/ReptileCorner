@@ -21,4 +21,25 @@
       </div>
       <a href="{% url 'profiles:edit_profile' %}" class="btn btn-outline-info">Edit Profile</a>
     </div>
+
+    <h2>{{ user.username }}'s Posts</h2> 
+    <section class="grid posts-list">  
+        {% for post in posts %} 
+            <article class="col-12 col-md-6 col-lg-4 col-xl-3 post">
+                <div class="grid">
+                    <h2 class="col-12">
+                        <a href="{% url 'posts:page' slug=post.slug %}">{{ post.title }}</a>
+                    </h2>
+                    <a href="{% url 'posts:page' slug=post.slug %}" class="col-12">
+                        <img class="image" src="{{ post.image.url }}" alt="{{ post.title }}">
+                    </a>
+                    <p class="body-field col-12">{{ post.body }}</p> 
+                    <p class="date-stamp col-12">
+                        <em>{{ post.date }}</em> by <strong>{{ post.author }}</strong>
+                    </p>
+                    <a href="{% url 'posts:page' slug=post.slug %}" class="read-more col-12">READ MORE</a>
+                </div>
+            </article>
+        {% endfor %}
+    </section>
 {% endblock content %}
