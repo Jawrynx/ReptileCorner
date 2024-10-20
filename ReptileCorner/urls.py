@@ -29,5 +29,7 @@ urlpatterns = [
     path('posts/', include('posts.urls')),
     path('users/', include('users.urls')),
     path('profile/', include('profiles.urls')),
+    path('about/', views.about),
+    path('support/', views.support),
 ]
 
