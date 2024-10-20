@@ -343,6 +343,53 @@ ul{
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
 }
 
+.content-section {
+    padding: 1rem;
+    background-color: green;
+}
+
+.profile-banner {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 35px;
+    padding: 2rem;
+    border: 1px solid black;
+    color: white;
+}
+
+.profile-description {
+    background-color: white;
+    border-radius: 25px;
+    padding:0.5rem 0.5rem 2rem;
+    text-align: start;
+}
+
+.profile-description > p{
+    margin-bottom: 0.9rem;
+}
+
+.profile-description > a {
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-edit {
+    position: relative;
+    top: 0.5rem;
+    left: 3rem;
+}
+
+.profile-description > a:hover {
+    background-color: rgb(253, 67, 67);
+    color: yellow;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+
 @media screen and (min-width: 992px) {
     /* Navbar */
     .desktop-nav, .desktop-user-links {
