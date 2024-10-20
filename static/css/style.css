@@ -147,9 +147,9 @@ ul{
 
 /* Main Content Area */
 
-/* .main {
-    text-align: center;
-} */
+.main {
+    background-color: green;
+}
 
 .hero-container {
     width: 100%;
@@ -456,6 +456,87 @@ textarea {
 
 #profile_picture-clear_id {
     display: none;
+}
+
+/* Login Page */
+
+.login-container {
+    position: relative;
+    width: 45%;
+    text-align: center;
+    background-color: yellow;
+    margin: 2rem;
+    padding: 2rem 0.5rem;
+    border-radius: 25px;
+}
+
+.login-container h1 {
+    background-color: greenyellow;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+    padding: 1rem;
+}
+
+.login-container > form > div {
+    background-color: rgb(1, 185, 1);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    padding: 1.5rem 1rem;
+}
+
+.login-container > form > div > label {
+    color: black;
+    margin: 2rem;
+    background-color: yellow;
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
+.login-container > form > div > input {
+    border-radius: 5px;
+    padding: 0.5rem;
+    margin-top: 1rem;
+}
+
+.login-main {
+    display: flex;
+    justify-content: center;
+}
+
+.form-submit {
+    background-color: rgb(0, 189, 0);
+    padding: 1rem;
+    border-radius: 25px;
+    color: white;
+    font-size: 2rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.form-submit:hover {
+    background-color: green;
+}
+
+/* Register Page */
+
+.register-section {
+    text-align: center;
+    padding: 2rem;
+}
+
+.register-container > h1 {
+    margin: 2rem;
+}
+
+#id_username_helptext,
+#id_password1_helptext,
+#id_password2_helptext {
+    margin: 2rem;
+    background-color: lightskyblue;
+    border-radius: 10px;
+    padding: 0.5rem;
+    border: 1px solid blue;
 }
 
 @media screen and (min-width: 992px) {
