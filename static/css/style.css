@@ -154,14 +154,14 @@ ul{
 .hero-container {
     width: 100%;
     padding: 50px;
-    background: white;
+    background: rgb(0, 185, 0);
 }
 
 .hero-title {
-    background-color: darkgreen;
+    background-color: yellow;
     padding: 10px;
     border-radius: 15px;
-    color: white;
+    color: black;
 }
 
 .desc {
