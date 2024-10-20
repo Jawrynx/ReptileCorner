@@ -1,15 +1,17 @@
 {% extends "layout.html" %} 
 {% block content %}
-    <div class="edit-profile-section">
-        <form method="POST" enctype="multipart/form-data"> 
-            {% csrf_token %}
-            <fieldset class="form-group">
-                <legend class="mb-4" style="color: black; margin: 4rem; padding: 0.7rem 4rem 0.7rem 1rem; border-radius: 12px; background-color: yellow;">Edit Profile</legend>
-                {{ p_form.as_p }} 
-            </fieldset>
-            <div class="form-group">
-                <button class="btn btn-outline-info" type="submit">Update Profile</button>
-            </div>
-        </form>
+    <div class="flex">
+        <div class="edit-profile-section">
+            <form method="POST" enctype="multipart/form-data"> 
+                {% csrf_token %}
+                <fieldset class="form-group">
+                    <legend class="mb-4" style="color: black; padding: 0.7rem 4rem 0.7rem 1rem; border-radius: 12px; background-color: yellow;">Edit Profile</legend>
+                    {{ p_form.as_p }} 
+                </fieldset>
+                <div class="form-group">
+                    <button class="btn btn-outline-info" type="submit">Update Profile</button>
+                </div>
+            </form>
+        </div>
     </div>
 {% endblock content %}

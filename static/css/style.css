@@ -150,6 +150,10 @@ ul{
 .main {
     background-color: green;
 }
+.flex {
+    display: flex;
+    justify-content: center;
+}
 
 .hero-container {
     width: 100%;
@@ -368,6 +372,9 @@ ul{
     border-radius: 25px;
     padding:0.5rem 0.5rem 2rem;
     text-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .profile-description > p{
@@ -384,9 +391,20 @@ ul{
 }
 
 .btn-edit {
-    position: relative;
-    top: 0.5rem;
-    left: 3rem;
+    background-color: red;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    transition: 0.5s ease-in-out;
+}
+
+.btn-edit:hover,
+.btn-outline-info:hover {
+    background-color: rgb(104, 104, 255);
+    transition: 0.1s ease-in-out;
+    border-color: white;
 }
 
 .profile-description > a:hover {
@@ -401,10 +419,15 @@ ul{
 .edit-profile-section {
     height: 100%;
     background-color: green;
+    width: 50%;
 }
 
 .edit-profile-section > form {
-    padding: 2rem 5rem 5rem 5rem;
+    padding: 1rem 5rem 2rem 5rem;
+}
+
+.edit-profile-section > form > div {
+    margin-top: 1rem;
 }
 
 #id_location,
@@ -424,9 +447,18 @@ label {
     margin-left: 2rem;
 }
 
+fieldset {
+    border: none;
+}
+
+fieldset > legend {
+    position: relative;
+    text-align: center;
+}
+
 fieldset > p {
     color: yellow;
-    margin: 2rem;
+    margin: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -449,7 +481,7 @@ fieldset > p > a {
 fieldset > * {
     background-color: yellow;
     border-radius: 20px;
-    padding: 2rem 0;
+    padding: 1rem 0;
     color: black;
 }
 
