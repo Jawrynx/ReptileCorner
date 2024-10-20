@@ -1,28 +1,28 @@
 {% extends "layout.html" %} 
 {% block content %}
-    <div class="content-section">
-      <div class="media">
+    <div class="content-section grid">
+      <div class="profile-banner col-12 col-md-6">
         {% if user.profile.profile_picture %}
           <img class="rounded-circle account-img" src="{{ user.profile.profile_picture.url }}">
         {% endif %}
-        <div class="media-body">
-          <h2 class="account-heading">{{ user.username }}</h2>
-          <p class="text-secondary">{{ user.email }}</p>
-          {% if user.profile.bio %}
-            <p class="text-muted">{{ user.profile.bio }}</p>
-          {% endif %}
-          {% if user.profile.location %}
-            <p class="text-muted">Location: {{ user.profile.location }}</p>
-          {% endif %}
-          {% if user.profile.favorite_reptile %}
-            <p class="text-muted">Favorite Reptile: {{ user.profile.favorite_reptile }}</p>
-          {% endif %}
-        </div>
+        <h2 class="account-heading">{{ user.username }}</h2>
       </div>
-      <a href="{% url 'profiles:edit_profile' %}" class="btn btn-outline-info">Edit Profile</a>
+      <div class="profile-description col-12 col-md-6">
+        <p class="text-secondary">{{ user.email }}</p>
+        {% if user.profile.bio %}
+          <p class="text-muted">{{ user.profile.bio }}</p>
+        {% endif %}
+        {% if user.profile.location %}
+          <p class="text-muted">Location: {{ user.profile.location }}</p>
+        {% endif %}
+        {% if user.profile.favorite_reptile %}
+          <p class="text-muted">Favorite Reptile: {{ user.profile.favorite_reptile }}</p>
+        {% endif %}
+        <a href="{% url 'profiles:edit_profile' %}" class="btn-edit">Edit Profile</a> 
+      </div>
     </div>
 
-    <h2>{{ user.username }}'s Posts</h2> 
+    <h2 style="padding: 3rem; font-size: 4rem; background-color: yellow;">{{ user.username }}'s Posts</h2> 
     <section class="grid posts-list">  
         {% for post in posts %} 
             <article class="col-12 col-md-6 col-lg-4 col-xl-3 post">
