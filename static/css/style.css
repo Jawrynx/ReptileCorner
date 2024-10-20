@@ -216,9 +216,13 @@ ul{
 
 .posts-container {
     background-color: #ffe139;
+    box-shadow: -1px -1px 5px 0px gray;
     height: 100%;
     padding-top: 50px;
     text-align: center;
+}
+.posts-container > h2 {
+    font-size: 3rem;
 }
 
 .posts-list {
@@ -462,7 +466,7 @@ textarea {
 
 .login-container {
     position: relative;
-    width: 45%;
+    width: 80%;
     text-align: center;
     background-color: yellow;
     margin: 2rem;
@@ -482,6 +486,8 @@ textarea {
     border-radius: 10px;
     margin-bottom: 1rem;
     padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .login-container > form > div > label {
@@ -556,6 +562,12 @@ footer {
     text-align: center;
     padding: 1rem 0;
     color: black;
+}
+
+@media screen and (min-width: 768px) {
+    .login-container {
+        width: 70%;
+    }
 }
 
 @media screen and (min-width: 992px) {
@@ -650,11 +662,15 @@ footer {
 
 
     .read-more:hover {
-        background-color: #005600; /* Slightly darker green on hover */
+        background-color: #005600;
     }
 
     /* Individual Posts */
     .post-page {
         margin: 50px 200px;
+    }
+
+    .login-container {
+        width: 50%;
     }
 }
