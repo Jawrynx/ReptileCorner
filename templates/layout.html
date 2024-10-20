@@ -27,8 +27,8 @@
                 <li><a href="/">Home</a></li>
                 <li><a href="{% url 'posts:list' %}">Posts</a></li>
                 <li><a href="#">Reptiles</a> </li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/support">Support</a></li>
                 <div class="line-container">
                     <span class="horizontal-line"></span>
                 </div>
@@ -48,8 +48,8 @@
                 <li><a href="/">Home</a></li>
                 <li><a href="{% url 'posts:list' %}">Posts</a></li>
                 <li><a href="#">Reptiles</a> </li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/support">Support</li>
             </ul>
          </div>
          <div class="desktop-user-links">
@@ -68,7 +68,23 @@
         {% endblock %}
     </main>
     <footer>
-
+        <div class="footer-container">
+            <div class="social-icons grid">
+                <a href="https://www.facebook.com" target="_blank" class="col-3">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://twitter.com" target="_blank" class="col-3">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.youtube.com" target="_blank" class="col-3">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://www.instagram.com" target="_blank" class="col-3">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+            <p class="copyright">&copy; 2024 Reptile Corner</p> 
+        </div>
     </footer>
 </body>
 </html>

@@ -539,6 +539,25 @@ textarea {
     border: 1px solid blue;
 }
 
+/* Footer */
+
+footer {
+    background-color: yellow;
+    box-shadow: -1px -1px 5px 0px gray;
+}
+
+.social-icons > a {
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 1rem;
+} 
+
+.copyright {
+    text-align: center;
+    padding: 1rem 0;
+    color: black;
+}
+
 @media screen and (min-width: 992px) {
     /* Navbar */
     .desktop-nav, .desktop-user-links {
