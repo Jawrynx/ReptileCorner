@@ -1,0 +1,1 @@
+web: gunicorn ReptileCorner.wsgi:application
