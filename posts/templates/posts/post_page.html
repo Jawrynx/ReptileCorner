@@ -6,24 +6,26 @@
 
 {% block content %}
     <section class="post-page">
-        <div class="grid">
-            <div class="col-1">
-                <div class="post-header">
-                    <i class="fa-solid fa-arrow-left" onclick="history.back()"> B A C K</i>
+        <div class="post-card">
+            <div class="grid">
+                <div class="col-1">
+                    <div class="post-header">
+                        <i class="fa-solid fa-arrow-left" onclick="history.back()"> B A C K</i>
+                    </div>
                 </div>
+                <div class="col-12">
+                    <div class="post-header">
+                        <h1>{{ post.title }}</h1>
+                    </div>
+                </div>
+            </div>
+            <img class="post-image col-12" src="{{ post.image.url }}" alt="{{ post.title }}">
+            <div class="col-12">
+                <p class="body-field">{{ post.body }}</p>
             </div>
             <div class="col-12">
-                <div class="post-header">
-                    <h1>{{ post.title }}</h1>
-                </div>
+                <p class="date-stamp">{{ post.date }} by {{ post.author }}</p>
             </div>
-        </div>
-        <img class="post-image" src="{{ post.image.url }}" alt="{{ post.title }}">
-        <div class="col-12">
-            <p class="body-field">{{ post.body }}</p>
-        </div>
-        <div class="col-12">
-            <p class="date-stamp">{{ post.date }} by {{ post.author }}</p>
         </div>
     </section>
 {% endblock %}

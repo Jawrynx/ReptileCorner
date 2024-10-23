@@ -295,12 +295,19 @@ ul{
 
 /* Individual Posts */
 .post-page {
-    margin: 50px 50px;
-    padding: 25px;
-    background-color: darkgreen;
-    border: 3px solid black;
-    border-radius: 25px;
     color: white;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+}
+
+.post-card {
+    margin: 2rem;
+    width: 50%;
+    border: 3px solid black;
+    background-color: darkgreen;
+    padding: 2rem;
+    border-radius: 25px;
 }
 
 /* .post-header {
@@ -699,7 +706,7 @@ footer {
 
     /* Individual Posts */
     .post-page {
-        margin: 50px 200px;
+        text-align: center;
     }
 
     .login-container {
