@@ -23,8 +23,17 @@
             <div class="col-12">
                 <p class="body-field">{{ post.body }}</p>
             </div>
-            <div class="col-12">
-                <p class="date-stamp">{{ post.date }} by {{ post.author }}</p>
+            <div class="col-12" id="post-info">
+                <p class="date-stamp">{{ post.date }}<br> by <br><br>
+                    <span class="post-profile">
+                        <a href="../profile/{{ post.author }}">{{ post.author }}</a>
+                        {% if post.author.profile.profile_picture %}
+                            <img src="{{ post.author.profile.profile_picture.url }}" alt="{{ post.author.username }}'s profile picture">
+                        {% else %}
+                            {% comment %} <img src="{% static 'images/default_profile_pic.jpg' %}" alt="Default profile picture">  {% endcomment %}
+                        {% endif %}
+                    </span>
+                </p>
             </div>
         </div>
     </section>

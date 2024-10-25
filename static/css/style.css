@@ -297,17 +297,57 @@ ul{
 .post-page {
     color: white;
     display: flex;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 255, 115, 0.897);
     justify-content: center;
 }
 
 .post-card {
     margin: 2rem;
-    width: 50%;
+    width: 90%;
     border: 3px solid black;
     background-color: darkgreen;
     padding: 2rem;
     border-radius: 25px;
+    font-size: 1.2rem;
+}
+
+#post-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#post-info p {
+    background-color: #00e900;
+    border-radius: 25px;
+    padding: 2rem;
+    width: 70%;
+    text-shadow: 1px 1px 1px darkgreen;
+    font-size: 0.8rem;
+}
+
+.post-profile {
+    margin: 1rem;
+    background-color: yellow;
+    border: 1px solid black;
+    padding: 0.2rem 0.8rem;
+    border-radius: 4px;
+}
+
+.post-profile {
+    color: black;
+    text-decoration: none;
+    text-shadow: none;
+}
+
+.post-profile img {
+    width: 30px; 
+    height: 30px;
+    border-radius: 50%; 
+    object-fit: cover;
+    vertical-align: middle;
+    margin-left: 10px;
 }
 
 /* .post-header {
@@ -322,7 +362,8 @@ ul{
     border-radius: 10px;
     border: 1px solid black;
     padding-top: 6px;
-    width: 100px;
+    padding-left: 10px;
+    width: 115px;
     height: 30px;
     cursor: pointer;
     color: black;
@@ -331,6 +372,8 @@ ul{
 .post-page h1 {
     margin-bottom: 20px;
     text-transform: uppercase;
+    text-align: center;
+    font-size: 1.2rem;
 }
 
 .post-image {
@@ -603,9 +646,50 @@ footer {
     color: black;
 }
 
+@media screen and (max-width: 460px) {
+    #post-info .post-profile img {
+        display: none;
+    }
+}
+
+
+@media screen and (min-width: 500px) {
+
+    .post-header h1 {
+        font-size: 2rem;
+    }
+
+    #post-info p {
+        font-size: 1.2rem;
+    }
+
+    #post-info .post-profile img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
 @media screen and (min-width: 768px) {
     .login-container {
         width: 70%;
+    }
+
+    /* Individual Posts */
+
+    .post-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .body-field,
+    #post-info p {
+        font-size: 1.4rem;
+    } 
+
+
+    
+    #post-info .post-profile img {
+        width: 50px;
+        height: 50px;
     }
 }
 
@@ -707,6 +791,15 @@ footer {
     /* Individual Posts */
     .post-page {
         text-align: center;
+    }
+
+    .post-card {
+        max-width: 70%;
+    }
+
+    .post-header h1 {
+        font-size: 3rem;
+        margin-bottom: 80px;
     }
 
     .login-container {

@@ -4,7 +4,7 @@ from django.db.models.signals import post_save
 
 # Create your models here.
 class Profile(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE) 
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile') 
     bio = models.TextField(blank=True)
     location = models.CharField(max_length=30, blank=True)
     favorite_reptile = models.CharField(max_length=50, blank=True)
