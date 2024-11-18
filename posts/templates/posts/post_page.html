@@ -20,8 +20,31 @@
                 </div>
             </div>
             <img class="post-image col-12" src="{{ post.image.url }}" alt="{{ post.title }}">
-            <div class="col-12">
+            <div class="col-12" id="post-text">
                 <p class="body-field">{{ post.body }}</p>
+            </div>
+            <div class="col-12" id="post-comments">
+                <h2>Comments</h2>
+                {% for comment in comments %}
+                    <div class="comment">
+                        <p class="comment-author">{{ comment.author }}:</p>
+                        <p class="comment-body">{{ comment.body }}</p>
+                        <p class="comment-date">{{ comment.created }}</p>
+                    </div>
+                {% endfor %}
+            
+                {% if new_comment %}
+                    <p>Your comment has been added.</p>
+                {% else %}
+                    <h3>Add a comment</h3>
+                    <form method="post">
+                        {% csrf_token %}
+                        <div id="comment-form-wrapper">  
+                            <textarea name="body" cols="40" rows="10"></textarea> 
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                {% endif %}
             </div>
             <div class="col-12" id="post-info">
                 <p class="date-stamp">{{ post.date }}<br> by <br><br>
