@@ -208,13 +208,13 @@ ul{
 
 /* Posts Lists Styling */
 
-.posts-list-title {
+.posts-list-title,
+.about-title {
     padding: 50px;
     font-size: 3rem;
     font-weight: bolder;
     color: white;
     background-color: darkgreen;
-    border-bottom: 3px solid black;
     text-align: center;
 }
 
@@ -687,12 +687,6 @@ textarea {
 }
 
 /* About Page */
-
-.about h1 {
-    text-align: center;
-    color: white;
-    padding: 30px;
-}
 
 .about-body {
     background-color: yellow;
