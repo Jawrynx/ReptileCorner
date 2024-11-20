@@ -5,14 +5,19 @@
 {% endblock %}
 
 {% block content %}
-  <h1>{{ reptile.name }}</h1>
-
-  {% if reptile.reptile_picture %} 
-    <img src="{{ reptile.reptile_picture.url }}" alt="{{ reptile.name }}" width="300"> 
-  {% endif %} 
-
-  <p>Age: {{ reptile.age }}</p>
-  <p>Bio: {{ reptile.bio }}</p>
-  <p>Owner: {{ reptile.user.username }}</p> 
-  <a href="{% url 'reptiles:add_reptile' %}">Add another reptile</a> 
+  <div class="content-section grid">
+    <div class="profile-banner col-12 col-md-6">
+    {% if reptile.reptile_picture %} 
+      <img class="rounded-circle account-img" src="{{ reptile.reptile_picture.url }}" alt="{{ reptile.name }}" width="300"> 
+    {% endif %} 
+      <h2 class="account-heading">{{ reptile.name }}</h2>
+    </div>
+    <div class="profile-description col-12 col-md-6">
+      <p>Age: {{ reptile.age }}</p>
+      <p>Species: {{ reptile.species }}</p>
+      <p>Bio: {{ reptile.bio }}</p>
+      <p>Owner: {{ reptile.user.username }}</p>
+      <a href="{% url 'reptiles:edit_reptile' pk=reptile.pk %}">Edit Reptile</a>
+    </div>
+  </div>
 {% endblock %}
