@@ -1,6 +1,6 @@
-# Reptile Corner | Full Stack Django Project
+# Reptile Corner | Reptile Social App
+*(originally a Full Stack Django Project I created for a Final Project with CodeInstitute)*
 
-Deployed Version - https://reptile-corner-ea36b0fff197.herokuapp.com/
 
 ## Brainstorming & Ideation - Sammy's Reptile Corner
 
