@@ -14,6 +14,7 @@
     </div>
     <div class="profile-description col-12 col-md-6">
       <p>Age: {{ reptile.age }}</p>
+      <p>Species: {{ reptile.species }}</p>
       <p>Bio: {{ reptile.bio }}</p>
       <p>Owner: {{ reptile.user.username }}</p>
       <a href="{% url 'reptiles:edit_reptile' pk=reptile.pk %}">Edit Reptile</a>
