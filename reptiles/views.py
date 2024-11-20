@@ -21,7 +21,7 @@ def reptile_detail(request, pk):
     reptile = get_object_or_404(Reptile, pk=pk)
     return render(request, 'reptiles/reptile_detail.html', {'reptile': reptile})
 
-def edit_profile(request, pk):
+def edit_reptile(request, pk):
     reptile = get_object_or_404(Reptile, pk=pk)
     if request.method == 'POST':
         form = ReptileForm(request.POST, request.FILES, instance=reptile)

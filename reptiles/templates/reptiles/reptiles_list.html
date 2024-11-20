@@ -5,12 +5,25 @@
 {% endblock %}
 
 {% block content %}
-  <h1>Reptiles</h1>
-  <ul>
+  <h1 class="posts-list-title">Reptiles</h1>
+
+  <a href="{% url 'reptiles:add_reptile' %}" class="add-reptile">Add Reptile</a>
+
+  <div class="reptile-list grid"> 
     {% for reptile in reptiles %}
-      <li>
-        <a href="{% url 'reptile_detail' pk=reptile.pk %}">{{ reptile.name }}</a> 
-      </li>
+      <div class="reptile-item col-12 col-md-6 col-lg-4"> 
+
+        {% if reptile.reptile_picture %}
+        <a href="{% url 'reptiles:reptile_detail' pk=reptile.pk %}"><img class="image" src="{{ reptile.reptile_picture.url }}" alt="{{ reptile.name }}"></a>
+        {% else %}
+          {% comment %} <img src="{% static '/media/snake.jpeg' %}" alt="Default Reptile Image">  {% endcomment %}
+        {% endif %}
+
+        <h2 class='reptile-name'><a href="{% url 'reptiles:reptile_detail' pk=reptile.pk %}">{{ reptile.name }}</a></h2> 
+        <p>Owner: <a href="../../profile/{{ reptile.user.username }}">{{ reptile.user.username }}</a></p>
+        
+      </div>
     {% endfor %}
-  </ul>
+  </div>
+
 {% endblock %}
