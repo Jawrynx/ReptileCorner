@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Reptiles List
+{% endblock %}
+
+{% block content %}
+  <h1>Reptiles</h1>
+  <ul>
+    {% for reptile in reptiles %}
+      <li>
+        <a href="{% url 'reptile_detail' pk=reptile.pk %}">{{ reptile.name }}</a> 
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
