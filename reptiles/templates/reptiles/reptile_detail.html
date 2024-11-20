@@ -17,7 +17,11 @@
       <p>Species: {{ reptile.species }}</p>
       <p>Bio: {{ reptile.bio }}</p>
       <p>Owner: {{ reptile.user.username }}</p>
-      <a href="{% url 'reptiles:edit_reptile' pk=reptile.pk %}">Edit Reptile</a>
+
+      {% if is_owner %}  
+        <a href="{% url 'reptiles:edit_reptile' pk=reptile.pk %}">Edit Reptile</a>
+      {% endif %} 
+
     </div>
   </div>
 {% endblock %}

@@ -18,7 +18,11 @@
         {% if user.profile.favorite_reptile %}
           <p class="text-muted">Favorite Reptile: {{ user.profile.favorite_reptile }}</p>
         {% endif %}
-        <a href="{% url 'profiles:edit_profile' %}" class="btn-edit">Edit Profile</a> 
+
+        {% if user == request.user %}  
+          <a href="{% url 'profiles:edit_profile' %}" class="btn-edit">Edit Profile</a> 
+        {% endif %} 
+
       </div>
     </div>
 
