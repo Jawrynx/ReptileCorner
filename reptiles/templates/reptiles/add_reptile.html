@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Add a Reptile
+{% endblock %}
+
+{% block content %}
+  <h1>Add a Reptile</h1>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Add Reptile</button>
+  </form>
+{% endblock %}
