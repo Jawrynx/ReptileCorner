@@ -19,7 +19,9 @@
                     </div>
                 </div>
             </div>
-            <img class="post-image col-12" src="{{ post.image.url }}" alt="{{ post.title }}">
+            {% if post.image %}
+                <img class="image" src="{{ post.image.url }}" alt="{{ post.title }}">
+            {% endif %}
             <div class="col-12" id="post-text">
                 <p class="body-field">{{ post.body }}</p>
             </div>
