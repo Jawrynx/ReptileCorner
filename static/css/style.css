@@ -623,7 +623,8 @@ textarea {
 }
 
 .login-container > form > div,
-.login-container > form > p {
+.login-container > form > p,
+.login-container > form > fieldset > p {
     background-color: rgb(1, 185, 1);
     border-radius: 10px;
     margin-bottom: 1rem;
@@ -633,7 +634,8 @@ textarea {
 }
 
 .login-container > form > div > label,
-.login-container > form > p > label  {
+.login-container > form > p > label,
+.login-container > form > fieldset > p > label  {
     color: black;
     margin: 2rem;
     background-color: yellow;
@@ -641,11 +643,39 @@ textarea {
     border-radius: 10px;
 }
 
+.login-container > form > fieldset > p > textarea,
+.login-container > form > fieldset > p > input,
+.login-container > form > fieldset > p > label {
+    width: 80%;
+}
+
 .login-container > form > div > input,
-.login-container > form > p > input  {
+.login-container > form > p > input,
+.login-container > form > fieldset > p > input  {
     border-radius: 5px;
     padding: 0.5rem;
     margin-top: 1rem;
+}
+
+.login-container > form > div > button {
+    width: 20%;
+    display: flex;
+    align-self: center;
+    text-transform: uppercase;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: yellow;
+}
+
+.login-container > form > fieldset > legend {
+    background-color: darkgreen;
+    color: white;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+    padding: 10px 20px;
 }
 
 .login-main {
