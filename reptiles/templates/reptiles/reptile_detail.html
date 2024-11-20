@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    {{ reptile.name }}
+{% endblock %}
+
+{% block content %}
+  <h1>{{ reptile.name }}</h1>
+
+  {% if reptile.reptile_picture %} 
+    <img src="{{ reptile.reptile_picture.url }}" alt="{{ reptile.name }}" width="300"> 
+  {% endif %} 
+
+  <p>Age: {{ reptile.age }}</p>
+  <p>Bio: {{ reptile.bio }}</p>
+  <p>Owner: {{ reptile.user.username }}</p> 
+  <a href="{% url 'reptiles:add_reptile' %}">Add another reptile</a> 
+{% endblock %}

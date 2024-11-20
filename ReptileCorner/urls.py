@@ -28,6 +28,7 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('posts/', include('posts.urls')),
     path('users/', include('users.urls')),
+    path('reptiles/', include('reptiles.urls')),
     path('profile/', include('profiles.urls')),
     path('about/', views.about),
     path('support/', views.support),
