@@ -622,7 +622,8 @@ textarea {
     padding: 1rem;
 }
 
-.login-container > form > div {
+.login-container > form > div,
+.login-container > form > p {
     background-color: rgb(1, 185, 1);
     border-radius: 10px;
     margin-bottom: 1rem;
@@ -631,7 +632,8 @@ textarea {
     flex-direction: column;
 }
 
-.login-container > form > div > label {
+.login-container > form > div > label,
+.login-container > form > p > label  {
     color: black;
     margin: 2rem;
     background-color: yellow;
@@ -639,7 +641,8 @@ textarea {
     border-radius: 10px;
 }
 
-.login-container > form > div > input {
+.login-container > form > div > input,
+.login-container > form > p > input  {
     border-radius: 5px;
     padding: 0.5rem;
     margin-top: 1rem;
