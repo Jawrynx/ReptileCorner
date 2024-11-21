@@ -832,10 +832,67 @@ footer {
     color: black;
 }
 
+/* Support Page */
+
+.support {
+    padding: 35px;
+}
+
+.support-banner {
+    background-color: #fed216;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.support-banner img {
+    width: 300px;
+    margin-left: 25px;
+}
+
+.support-banner p {
+    text-align: center;
+    margin: 15px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.support-details {
+    background-color: rgba(0, 0, 0, 0.6);
+    min-height: 315px;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.support-link {
+    background-color: yellow;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.support-link p strong {
+    background-color: darkgreen;
+    border-radius: 7px;
+    color: white;
+    padding: 5px;
+}
+
 @media screen and (max-width: 460px) {
     #post-info .post-profile img {
         display: none;
     }
+}
+
+.support-description {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    padding: 30px;
+    font-weight: bolder;
 }
 
 
