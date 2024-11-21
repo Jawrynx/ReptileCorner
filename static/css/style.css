@@ -10,8 +10,8 @@
 
 body {
     font-family: 'Ubuntu';
-    background-color: white;
     color: black;
+    background-color: yellow;
 }
 
 a{
@@ -147,9 +147,6 @@ ul{
 
 /* Main Content Area */
 
-.main {
-    background-color: green;
-}
 .flex {
     display: flex;
     justify-content: center;
@@ -208,25 +205,28 @@ ul{
 
 /* Posts Lists Styling */
 
-.posts-list-title,
-.about-title {
+.page-title {
     padding: 50px;
     font-size: 3rem;
     font-weight: bolder;
     color: white;
-    background-color: darkgreen;
     text-align: center;
+    background-color: rgba(0, 185, 0);
+    text-transform: uppercase;
 }
 
 .posts-container {
-    background-color: #ffe139;
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 25px;
     box-shadow: -1px -1px 5px 0px gray;
     height: 100%;
     padding-top: 50px;
+    margin: 50px;
     text-align: center;
 }
 .posts-container > h2 {
     font-size: 3rem;
+    color: white;
 }
 
 .posts-list {
@@ -235,7 +235,6 @@ ul{
     align-items: center;
     width: 100%;
     padding: 50px;
-    background-color: #ffe139;
     text-align: center;
 }
 
@@ -247,9 +246,6 @@ ul{
     border-radius: 15px;
     margin: 15px 15px;
     padding: 20px;
-    box-shadow: 
-        5px 5px 10px rgba(0, 0, 0, 0.3),
-        -5px -5px 15px rgba(255, 255, 255, 0.5);
 }
 
 .post p {
@@ -610,6 +606,7 @@ textarea {
     width: 80%;
     text-align: center;
     background-color: yellow;
+    border: 2px solid black;
     margin: 2rem;
     padding: 2rem 0.5rem;
     border-radius: 25px;
@@ -681,6 +678,7 @@ textarea {
 .login-main {
     display: flex;
     justify-content: center;
+    background-color: darkgreen;
 }
 
 .form-submit {
@@ -767,7 +765,8 @@ textarea {
 .reptile-list {
     display: flex;
     flex-wrap: wrap; 
-    gap: 20px; 
+    gap: 20px;
+    background-color:rgb(76, 255, 76);
 }
   
 .reptile-item {
@@ -807,10 +806,20 @@ textarea {
 
 .add-reptile {
     background-color: black;
+    border: 2px solid yellow;
     color: white;
     padding: 15px;
     border-radius: 10px;
     margin: 50px;
+    transition: 0.3s ease-in-out;
+}
+
+.add-reptile:hover {
+    background-color: yellow;
+    border: 2px solid black;
+    color: black;
+    scale: 1.01;
+    transition: 0.3s ease-in-out;
 }
 
 /* Footer */
@@ -827,15 +836,22 @@ footer {
 } 
 
 .copyright {
-    text-align: center;
+    margin-left: 50px;
+    text-align: left;
     padding: 1rem 0;
     color: black;
+}
+
+.version {
+    text-align: right;
+    margin-right: 50px;
 }
 
 /* Support Page */
 
 .support {
     padding: 35px;
+    background-color: darkgreen;
 }
 
 .support-banner {
