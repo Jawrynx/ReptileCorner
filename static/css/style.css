@@ -238,6 +238,13 @@ ul{
     text-align: center;
 }
 
+.list-image {
+    min-height: 250px;
+    max-height: 250px;
+    height: 100%;
+    object-fit: cover;
+}
+
 .post {
     background-color: yellow;
     align-content: center;
@@ -268,7 +275,7 @@ ul{
 
 .image {
     width: 100%;
-    border-radius: 10px;
+    border-radius: 15px;
     margin-bottom: 20px;
 }
 
@@ -301,10 +308,21 @@ ul{
     margin: 2rem;
     width: 90%;
     border: 3px solid black;
-    background-color: darkgreen;
+    background-color: yellow;
     padding: 2rem;
     border-radius: 25px;
     font-size: 1.2rem;
+}
+
+.post-header h1 {
+    color: black;
+}
+
+.body-field {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    padding: 20px;
+    color: white;
 }
 
 #post-info {
@@ -354,7 +372,7 @@ ul{
 
 #post-comments {
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.8);
     border-radius: 15px;
     padding: 20px;
     margin-top: 40px;
@@ -413,15 +431,16 @@ ul{
 
 .post-header i {
     left: 0;
-    background-color: yellow;
+    background-color: black;
     border-radius: 10px;
     border: 1px solid black;
     padding-top: 6px;
     padding-left: 10px;
-    width: 115px;
+    padding-right: 10px;
+    width: 140px;
     height: 30px;
     cursor: pointer;
-    color: black;
+    color: white;
 }
 
 .post-page h1 {
@@ -1047,8 +1066,7 @@ footer {
 
     .post img {
         display: block;
-        max-width: 100%;
-        height: auto;    
+        max-width: 100%; 
     }
 
     .post .body-field {
