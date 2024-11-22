@@ -16,7 +16,7 @@
       <p>Age: {{ reptile.age }}</p>
       <p>Species: {{ reptile.species }}</p>
       <p>Bio: {{ reptile.bio }}</p>
-      <p>Owner: {{ reptile.user.username }}</p>
+      <p>Owner: <a href="../../profile/{{ reptile.user.username }}">{{ reptile.user.username }}</a></p>
 
       {% if is_owner %}  
         <a href="{% url 'reptiles:edit_reptile' pk=reptile.pk %}">Edit Reptile</a>
