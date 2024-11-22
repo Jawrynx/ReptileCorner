@@ -23,14 +23,14 @@
                 <img class="image" src="{{ post.image.url }}" alt="{{ post.title }}">
             {% endif %}
             <div class="col-12" id="post-text">
-                <p class="body-field">{{ post.body }}</p>
+                <p class="body-field">{{ post.body|linebreaksbr }}</p>
             </div>
             <div class="col-12" id="post-comments">
                 <h2>Comments</h2>
                 {% for comment in comments %}
                     <div class="comment">
                         <p class="comment-author">{{ comment.author }}:</p>
-                        <p class="comment-body">{{ comment.body }}</p>
+                        <p class="comment-body">{{ comment.body|linebreaksbr }}</p>
                         <p class="comment-date">{{ comment.created }}</p>
                     </div>
                 {% endfor %}
