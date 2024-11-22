@@ -27,9 +27,10 @@
     </div>
 
     <h2 style="padding: 3rem; font-size: 4rem; background-color: yellow;">{{ user.username }}'s Posts</h2> 
+    <div class="posts-list-container">
     <section class="grid posts-list profile-posts-list">  
         {% for post in posts %} 
-            <article class="col-12 col-md-6 col-lg-4 col-xl-3 post">
+            <article class="col-12 col-md-6 col-lg-4 post">
                 <div class="grid">
                     <h2 class="col-12">
                         <a href="{% url 'posts:page' slug=post.slug %}">{{ post.title }}</a>
@@ -46,4 +47,5 @@
             </article>
         {% endfor %}
     </section>
+  </div>
 {% endblock content %}

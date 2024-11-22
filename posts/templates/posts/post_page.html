@@ -23,16 +23,20 @@
                 </div>
                 <div class="col-1">
                 </div>
+                {% if post.author == user %} 
+
                 <div class="col-1">
                     <div class="post-header" id="post-edit">
-                        <i class="fa-solid fa-pen" onclick="history.back()"> E D I T</i>
+                        <a href="{% url 'posts:edit_post' slug=post.slug %}"><i class="fa-solid fa-pen"> E D I T</i></a>
                     </div>
                 </div>
                 <div class="col-1">
-                    <div class="post-header" id="post-delete"> 
-                        <i class="fa-solid fa-trash" onclick="history.back()"> D E L</i>
+                    <div class="post-header" id="post-delete">
+                        <a href="{% url 'posts:delete_post' slug=post.slug %}"><i class="fa-solid fa-trash"> D E L</i></a>
                     </div>
                 </div>
+
+                {% endif %} 
                 <div class="col-12">
                     <div class="post-header">
                         <h1>{{ post.title }}</h1>
