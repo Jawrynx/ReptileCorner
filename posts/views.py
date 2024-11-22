@@ -3,6 +3,7 @@ from .models import Post
 from django.contrib.auth.decorators import login_required
 from . import forms
 from comments.forms import CommentForm 
+
 # Create your views here.
 
 def posts_list(request):
@@ -39,3 +40,29 @@ def post_new(request):
     else:
         form = forms.CreatePost()
     return render(request, 'posts/post_new.html', { 'form': form })
+
+@login_required
+def edit_post(request, slug):
+    post = get_object_or_404(Post, slug=slug)
+    if post.author != request.user:
+        return redirect('posts:page', slug=post.slug)  # Redirect if not the author
+
+    if request.method == 'POST':
+        form = forms.CreatePost(request.POST, request.FILES, instance=post)  # Use forms.CreatePost
+        if form.is_valid():
+            form.save()
+            return redirect('posts:page', slug=post.slug)
+    else:
+        form = forms.CreatePost(instance=post)  # Use forms.CreatePost
+    return render(request, 'posts/post_edit.html', {'form': form, 'post': post})
+
+@login_required
+def delete_post(request, slug):
+    post = get_object_or_404(Post, slug=slug)
+    if post.author != request.user:
+        return redirect('posts:page', slug=post.slug)  # Redirect if not the author
+
+    if request.method == 'POST':  # Confirm deletion with POST request
+        post.delete()
+        return redirect('posts:list')  # Redirect to post list after deletion
+    return render(request, 'posts/post_delete.html', {'post': post})

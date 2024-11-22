@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <section class="login-main">
+        <div class="login-container">
+            <h1>Delete Post</h1>
+            <p>Are you sure you want to delete "{{ post.title }}"?</p>
+            <form method="post">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger">Delete</button>
+                <a href="{% url 'posts:page' slug=post.slug %}" class="btn btn-secondary">Cancel</a>
+            </form>
+        </div>
+    </section>
+{% endblock %}

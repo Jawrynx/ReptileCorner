@@ -235,13 +235,15 @@ ul{
     flex-direction: column; */
     align-items: center;
     width: 100%;
-    padding: 50px;
     text-align: center;
 }
 
 .profile-posts-list {
     background-color: rgba(0, 0, 0, 0.8);
     border-radius: 25px;
+}
+
+.posts-list-container {
     margin: 50px;
 }
 
@@ -333,7 +335,7 @@ ul{
 }
 
 .body-short {
-    max-height: 100px;
+    max-height: 75px;
     height: 100%;
 }
 
@@ -444,6 +446,34 @@ ul{
 .post-header i {
     left: 0;
     background-color: black;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding-top: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 140px;
+    height: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+#post-edit i {
+    left: 0;
+    background-color: green;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding-top: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 140px;
+    height: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+#post-delete i {
+    left: 0;
+    background-color: red;
     border-radius: 10px;
     border: 1px solid black;
     padding-top: 6px;
@@ -957,6 +987,10 @@ footer {
         width: 40px;
         height: 40px;
     }
+
+    .posts-list {
+        padding: 50px;
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -980,7 +1014,9 @@ footer {
         font-size: 1.4rem;
     } 
 
-
+    .body-short {
+        max-height: 100px;
+    }
     
     #post-info .post-profile img {
         width: 50px;

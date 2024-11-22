@@ -13,6 +13,30 @@
                         <i class="fa-solid fa-arrow-left" onclick="history.back()"> B A C K</i>
                     </div>
                 </div>
+                <div class="col-2">
+                </div>
+                <div class="col-2">
+                </div>
+                <div class="col-2">
+                </div>
+                <div class="col-2">
+                </div>
+                <div class="col-1">
+                </div>
+                {% if post.author == user %} 
+
+                <div class="col-1">
+                    <div class="post-header" id="post-edit">
+                        <a href="{% url 'posts:edit_post' slug=post.slug %}"><i class="fa-solid fa-pen"> E D I T</i></a>
+                    </div>
+                </div>
+                <div class="col-1">
+                    <div class="post-header" id="post-delete">
+                        <a href="{% url 'posts:delete_post' slug=post.slug %}"><i class="fa-solid fa-trash"> D E L</i></a>
+                    </div>
+                </div>
+
+                {% endif %} 
                 <div class="col-12">
                     <div class="post-header">
                         <h1>{{ post.title }}</h1>
