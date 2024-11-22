@@ -451,10 +451,16 @@ ul{
     padding-top: 6px;
     padding-left: 10px;
     padding-right: 10px;
-    width: 140px;
+    width: 40px;
     height: 30px;
     cursor: pointer;
     color: white;
+}
+
+.post-header i > span,
+#post-edit i > span,
+#post-delete i > span {
+    display: none;
 }
 
 #post-edit i {
@@ -465,7 +471,7 @@ ul{
     padding-top: 6px;
     padding-left: 10px;
     padding-right: 10px;
-    width: 140px;
+    width: 40px;
     height: 30px;
     cursor: pointer;
     color: white;
@@ -479,7 +485,7 @@ ul{
     padding-top: 6px;
     padding-left: 10px;
     padding-right: 10px;
-    width: 140px;
+    width: 40px;
     height: 30px;
     cursor: pointer;
     color: white;
@@ -1138,6 +1144,19 @@ footer {
     .post-header h1 {
         font-size: 3rem;
         margin-bottom: 80px;
+    }
+
+    .post-header i,
+    #post-edit i,
+    #post-delete i {
+        width: 140px;
+        height: 50px;
+    }
+
+    .post-header i > span,
+    #post-edit i > span,
+    #post-delete i > span {
+        display: block;
     }
 
     #post-comments {
