@@ -12,6 +12,7 @@ body {
     font-family: 'Ubuntu';
     color: black;
     background-color: yellow;
+    overflow-x: hidden;
 }
 
 a{
@@ -238,6 +239,12 @@ ul{
     text-align: center;
 }
 
+.profile-posts-list {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 25px;
+    margin: 50px;
+}
+
 .list-image {
     min-height: 250px;
     max-height: 250px;
@@ -323,6 +330,11 @@ ul{
     border-radius: 15px;
     padding: 20px;
     color: white;
+}
+
+.body-short {
+    max-height: 100px;
+    height: 100%;
 }
 
 #post-info {
