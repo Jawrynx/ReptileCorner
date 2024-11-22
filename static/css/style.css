@@ -755,7 +755,7 @@ textarea {
 }
 
 .about-main img {
-    max-width: 500px;
+    max-width: 250px;
     border-radius: 50px;
 }
 
@@ -929,6 +929,11 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
+
+    .about-main img {
+        max-width: 500px;
+    }
+
     .login-container {
         width: 70%;
     }

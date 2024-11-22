@@ -23,7 +23,7 @@
                 <img class="image" src="{{ post.image.url }}" alt="{{ post.title }}">
             {% endif %}
             <div class="col-12" id="post-text">
-                <p class="body-field">{{ post.body }}</p>
+                <p class="body-field">{{ post.body|linebreaksbr }}</p>
             </div>
             <div class="col-12" id="post-comments">
                 <h2>Comments</h2>
