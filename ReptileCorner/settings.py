@@ -84,11 +84,21 @@ WSGI_APPLICATION = 'ReptileCorner.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',  # Ensure you have psycopg2 installed (`pip install psycopg2`)
+        'NAME': '',  # This field is no longer used with DATABASE_URL
+        'USER': '',  # This field is no longer used with DATABASE_URL
+        'PASSWORD': '',  # This field is no longer used with DATABASE_URL
+        'HOST': '',  # This field is no longer used with DATABASE_URL
+        'PORT': '',  # This field is no longer used with DATABASE_URL
+        'CONN_MAX_AGE': 600,  # Optional: Pool connection for efficiency (default: 0 means no pooling)
+        'DISABLE_TRANSACTION_AT_COMMIT': True,  # Optional: Improves performance for read-mostly workloads
+        'ATOMIC_REQUESTS': False,  # Optional: Disable atomic requests for specific use cases
+        'EXTRA_PARAMS': {
+            'sslmode': 'require'  # Optional: Enforce SSL connection to the database (recommended)
+        },
+        'DATABASE_URL': 'postgres://u65mfkv9i3qpce:p318c5c97a00225f90d3df9622d8a1b5f47a0c99476ff8699fce9a7952b427fde@cav8p52l9arddb.cluster-czz5s0kz4scl.eu-west-1.rds.amazonaws.com:5432/d9okjh7vavmv8e',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
