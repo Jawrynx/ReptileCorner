@@ -84,14 +84,11 @@ WSGI_APPLICATION = 'ReptileCorner.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd9okjh7vavmv8e',
-        'USER': 'u65mfkv9i3qpce',
-        'PASSWORD': 'p318c5c97a00225f90d3df9622d8a1b5f47a0c99476ff8699fce9a7952b427fde',
-        'HOST': 'cav8p52l9arddb.cluster-czz5s0kz4scl.eu-west-1.rds.amazonaws.com',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
